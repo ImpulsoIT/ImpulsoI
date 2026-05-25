@@ -1,13 +1,1089 @@
 <!doctype html>
-<html lang="en">
+<html lang="es" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My Google AI Studio App</title>
+    <title>ImpulsoIT | Sitios Web por Suscripción Modernos en 2 a 5 Días</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="./public/favicon.svg" />
   </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
+  <body class="bg-cyber-black text-white font-sans overflow-x-hidden relative grid-overlay">
+    
+    <!-- Header / Navbar Element -->
+    <nav class="fixed top-0 left-0 right-0 z-50 border-b border-white/5 bg-cyber-black/95 backdrop-blur-xl">
+      <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+        <!-- Brand Logo Element -->
+        <a href="#" class="flex items-center gap-3 group" id="navbar-logo">
+          <div class="w-10 h-10 bg-gradient-to-br from-electric-blue via-magenta-accent to-vibrant-orange rounded-sm flex items-center justify-center font-black text-white text-xl shadow-[0_0_20px_rgba(34,80,244,0.3)] group-hover:scale-105 transition-transform">
+            I
+          </div>
+          <span class="text-2xl font-black tracking-tighter uppercase leading-none text-white">
+            Impulso<span class="text-electric-blue">IT</span>
+          </span>
+        </a>
+
+        <!-- Desktop Navigation Items -->
+        <div class="hidden lg:flex gap-8 text-[11px] uppercase tracking-[0.25em] font-black text-white/50">
+          <a href="#proceso" class="hover:text-magenta-accent hover:tracking-[0.28em] transition-all duration-300">Metodología</a>
+          <a href="#servicios" class="hover:text-magenta-accent hover:tracking-[0.28em] transition-all duration-300">Qué Incluye</a>
+          <a href="#planes" class="hover:text-magenta-accent hover:tracking-[0.28em] transition-all duration-300">Planes</a>
+          <a href="#proyectos" class="hover:text-magenta-accent hover:tracking-[0.28em] transition-all duration-300 font-bold text-electric-blue">Muestras Reales</a>
+          <a href="#faq" class="hover:text-magenta-accent hover:tracking-[0.28em] transition-all duration-300">FAQ</a>
+        </div>
+
+        <!-- Floating Action Desktop Button -->
+        <div class="hidden lg:flex items-center gap-4">
+          <a 
+            href="https://wa.me/5515981723627" 
+            target="_blank"
+            rel="noopener noreferrer"
+            class="bg-gradient-to-r from-electric-blue to-magenta-accent px-6 py-2.5 text-xs font-black uppercase tracking-widest text-white hover:opacity-90 transition-all border-r-[4px] border-white active:scale-95 shadow-[0_0_20px_rgba(34,80,244,0.25)]"
+          >
+            WhatsApp ↗
+          </a>
+        </div>
+
+        <!-- Mobile Hamburguer Toggle -->
+        <button 
+          id="mobile-menu-btn"
+          aria-label="Toggle menu"
+          class="lg:hidden p-2 text-white/70 hover:text-magenta-accent transition-colors focus:outline-none"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-menu"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
+        </button>
+      </div>
+
+      <!-- Mobile Drawer Dropdown -->
+      <div 
+        id="mobile-drawer" 
+        class="lg:hidden overflow-hidden max-h-0 opacity-0 transition-all duration-350 bg-cyber-dark border-t border-white/5"
+      >
+        <div class="px-6 py-6 space-y-4">
+          <div class="flex flex-col gap-4 text-xs uppercase tracking-widest font-black">
+            <a href="#proceso" class="mobile-drawer-link text-white/70 hover:text-magenta-accent transition-colors py-2 border-b border-white/5 block">Metodología</a>
+            <a href="#servicios" class="mobile-drawer-link text-white/70 hover:text-magenta-accent transition-colors py-2 border-b border-white/5 block">Qué Incluye</a>
+            <a href="#planes" class="mobile-drawer-link text-white/70 hover:text-magenta-accent transition-colors py-2 border-b border-white/5 block">Planes</a>
+            <a href="#proyectos" class="mobile-drawer-link text-electric-blue hover:text-magenta-accent transition-colors py-2 border-b border-white/5 block">Muestras Reales</a>
+            <a href="#faq" class="mobile-drawer-link text-white/70 hover:text-magenta-accent transition-colors py-2 border-b border-white/5 block">Dudas Resueltas</a>
+          </div>
+          <div class="pt-4">
+            <a 
+              href="https://wa.me/5515981723627" 
+              target="_blank"
+              rel="noopener noreferrer"
+              class="block text-center bg-magenta-accent text-white px-6 py-4 text-xs font-black uppercase tracking-widest border-r-[4px] border-white shadow-lg shadow-magenta-accent/20"
+            >
+              CHATEÁ EN MINUTOS POR WHATSAPP ↗
+            </a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero / Main Cover Area -->
+    <header class="relative min-h-screen flex items-center pt-28 pb-16 overflow-hidden bg-cyber-black">
+      <!-- Glow Lights -->
+      <div class="absolute top-1/4 right-0 w-[350px] h-[350px] bg-electric-blue/15 blur-[120px] rounded-full pointer-events-none"></div>
+      <div class="absolute bottom-1/4 left-0 w-[450px] h-[450px] bg-magenta-accent/10 blur-[150px] rounded-full pointer-events-none"></div>
+      
+      <div class="container mx-auto px-6 relative z-10 w-full max-w-7xl">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          
+          <!-- Column copy -->
+          <div class="lg:col-span-7 space-y-8">
+            <div class="inline-flex flex-wrap items-center gap-3">
+              <span class="px-3.5 py-1.5 border border-electric-blue/30 text-electric-blue text-[10px] md:text-xs font-mono font-bold uppercase tracking-[0.2em] bg-electric-blue/5 rounded-sm neon-border-blue">
+                ENTREGA EXPÓRTABLE: 2 A 5 DÍAS MÁXIMO
+              </span>
+              <span class="inline-flex items-center gap-1.5 text-[10px] font-mono font-bold bg-white/5 px-2.5 py-1 text-white/70 uppercase tracking-widest rounded-sm">
+                <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-ping"></span>
+                Suscripción Activa
+              </span>
+            </div>
+
+            <!-- Interchanging Slideshow Block -->
+            <div class="min-h-[170px] md:min-h-[220px] flex flex-col justify-center">
+              <p id="hero-title-label" class="text-vibrant-orange font-mono text-[10px] sm:text-xs font-black uppercase tracking-[0.3em] mb-3">
+                // EFICIENCIA PURA
+              </p>
+              <h1 id="hero-title-main" class="text-4xl sm:text-5xl md:text-6xl font-black uppercase tracking-tighter italic leading-[0.95]">
+                Tu sitio web por suscripción: lanzá en 2 a 5 días, pagá mes a mes.
+              </h1>
+              <div id="hero-title-sub">
+                <!-- Additional highlight lines are swapped from mainJS -->
+              </div>
+            </div>
+
+            <!-- Client interactive title preview controllers -->
+            <div class="flex items-center gap-4">
+              <span class="text-[9px] font-mono uppercase tracking-widest text-white/40">Cambiar promesa de valor:</span>
+              <div class="flex gap-2">
+                <button data-idx="0" class="hero-bullet w-7 h-2 cursor-pointer transition-all bg-[#d91eff]" aria-label="Slide 1"></button>
+                <button data-idx="1" class="hero-bullet w-3 h-2 cursor-pointer transition-all bg-white/15 hover:bg-white/30" aria-label="Slide 2"></button>
+                <button data-idx="2" class="hero-bullet w-3 h-2 cursor-pointer transition-all bg-white/15 hover:bg-white/30" aria-label="Slide 3"></button>
+              </div>
+            </div>
+
+            <!-- Elevator pitch -->
+            <p class="text-base md:text-lg text-white/70 max-w-xl leading-relaxed">
+              Diseño profesional, código optimizado y listo para vender en tiempo récord. Sin inversión inicial asfixiante: pagás un fee mensual fijo con soporte de guardia, optimización SEO y cambios periódicos incluidos de raíz.
+            </p>
+
+            <!-- Quick bullets points -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-y-3 gap-x-6 text-xs font-mono font-bold uppercase tracking-wider text-white/60">
+              <div class="flex items-center gap-2.5">
+                <span class="w-1.5 h-1.5 bg-electric-blue"></span>
+                Lanzamiento récord (2 a 5 días)
+              </div>
+              <div class="flex items-center gap-2.5">
+                <span class="w-1.5 h-1.5 bg-vibrant-orange"></span>
+                0% costos ocultos de setup
+              </div>
+              <div class="flex items-center gap-2.5">
+                <span class="w-1.5 h-1.5 bg-magenta-accent"></span>
+                Ampliaciones y mejoras incluidas
+              </div>
+              <div class="flex items-center gap-2.5">
+                <span class="w-1.5 h-1.5 bg-electric-blue"></span>
+                Soporte de guardia prioritario
+              </div>
+            </div>
+
+            <!-- Big Action Area for Click-to-Chat Conversion -->
+            <div class="pt-2 space-y-4">
+              <a 
+                href="https://wa.me/5515981723627" 
+                target="_blank"
+                rel="noopener noreferrer"
+                class="inline-flex flex-col justify-center bg-white text-black hover:bg-gradient-to-r hover:from-electric-blue hover:to-magenta-accent hover:text-white px-8 py-5 text-left w-full sm:w-auto border-b-4 border-electric-blue hover:border-white transition-all shadow-[0_10px_30px_rgba(255,255,255,0.02)] active:translate-y-1"
+              >
+                <span class="font-black uppercase tracking-widest text-sm flex items-center gap-2">
+                  IMPULSAR MI WEB POR WHATSAPP ↗
+                </span>
+                <span class="text-[10px] font-mono tracking-wider opacity-60 mt-0.5">Te respondemos en minutos. Sin vueltas ni rodeos comerciales.</span>
+              </a>
+
+              <!-- Urgency metrics indicator -->
+              <p class="text-[10px] font-mono uppercase tracking-[0.1em] text-white/40">
+                ⚠️ <span class="text-white/80 font-bold">Cupos restringidos al mes</span> para asegurar excelencia • 
+                <span id="live-active-projs" class="font-bold text-vibrant-orange transition-all duration-300">+28 proyectos lanzados este año</span>
+              </p>
+            </div>
+
+          </div>
+
+          <!-- Column Live Mock browser showcase -->
+          <div class="lg:col-span-5 relative">
+            <div class="border border-white/10 bg-cyber-dark p-1 rounded-sm shadow-[0_20px_50px_rgba(0,0,0,0.8)] overflow-hidden">
+              <!-- Window control dots -->
+              <div class="bg-[#121216] px-4 py-3 flex justify-between items-center border-b border-white/5 text-[9px] font-mono text-white/30">
+                <div class="flex items-center gap-2">
+                  <span class="w-2.5 h-2.5 rounded-full bg-red-500/80 inline-block"></span>
+                  <span class="w-2.5 h-2.5 rounded-full bg-yellow-500/80 inline-block"></span>
+                  <span class="w-2.5 h-2.5 rounded-full bg-green-500/80 inline-block"></span>
+                  <span class="font-bold ml-1 text-white/50">LAUNCH_MONITOR.JS</span>
+                </div>
+                <span class="text-electric-blue">Uptime: 100%</span>
+              </div>
+
+              <!-- Simulator body -->
+              <div class="p-6 space-y-6">
+                <div class="flex justify-between items-center">
+                  <span class="text-[9px] font-mono bg-electric-blue/10 border border-electric-blue/30 text-electric-blue px-2 py-0.5 rounded-sm">VITE ENGINE ACTIVE</span>
+                  <span class="text-[9px] font-mono text-white/40">ESTIMACIÓN: 2-5 DÍAS</span>
+                </div>
+
+                <div class="space-y-2">
+                  <div class="h-4 bg-white/5 rounded-sm w-5/6"></div>
+                  <div class="h-3 bg-white/5 rounded-sm w-2/3"></div>
+                  <div class="h-10 bg-gradient-to-r from-electric-blue/10 to-transparent border-l-2 border-electric-blue flex items-center px-3 text-[10px] text-white/70 italic">
+                    Sin cobros iniciales pesados de programación a medida.
+                  </div>
+                </div>
+
+                <div class="grid grid-cols-2 gap-3 pt-2">
+                  <div class="bg-[#121216] p-4 border border-white/5 rounded-sm">
+                    <span class="text-magenta-accent block font-mono text-xl font-black italic">149 USD</span>
+                    <span class="text-[9px] font-mono uppercase text-white/45">Planes Accesibles</span>
+                  </div>
+                  <div class="bg-[#121216] p-4 border border-white/5 rounded-sm">
+                    <span class="text-vibrant-orange block font-mono text-xl font-black italic">RESPONSIVO</span>
+                    <span class="text-[9px] font-mono uppercase text-white/45">Móvil & Tableta</span>
+                  </div>
+                </div>
+
+                <!-- Simulation terminal feed -->
+                <div class="bg-black/80 font-mono text-[9px] p-4 rounded-sm text-emerald-400 space-y-1 select-none">
+                  <p class="text-white/20">// LOCALHOST:3000</p>
+                  <p>&gt; vite server compiling styles...</p>
+                  <p>&gt; load Tailwind v4 layouts [OK]</p>
+                  <p class="text-magenta-accent">&gt; WhatsApp Click-to-Chat trigger injected.</p>
+                  <p class="text-electric-blue">&gt; Hostinger hPanel config validation complete.</p>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Neon backdrop glow -->
+            <div class="absolute -inset-1.5 border border-electric-blue/10 blur-sm rounded-sm pointer-events-none -z-10 scale-[1.01]"></div>
+          </div>
+
+        </div>
+      </div>
+    </header>
+
+    <!-- Step-by-Step Methodology Section (Cómo Funciona) -->
+    <section id="proceso" class="py-28 bg-[#0a0a0c] border-y border-white/5 relative">
+      <div class="container mx-auto px-6 w-full max-w-7xl">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+          
+          <!-- Sticky section info on left -->
+          <div class="lg:col-span-4 lg:sticky lg:top-32 space-y-6">
+            <span class="text-magenta-accent font-mono text-[10px] uppercase tracking-[0.5em] font-black block">
+              // LOGÍSTICA DE ACCIÓN MÁXIMA
+            </span>
+            <h2 class="text-4xl md:text-5xl lg:text-6xl font-black uppercase tracking-tighter italic leading-[0.95] text-white">
+              SITIOS REDONDOS <br />
+              EN <span class="bg-gradient-to-r from-electric-blue to-magenta-accent bg-clip-text text-transparent italic">4 PASOS</span>
+            </h2>
+            <div class="h-1 w-16 bg-electric-blue"></div>
+            <p class="text-white/50 text-sm leading-relaxed max-w-sm italic">
+              Sin burocracias, sin entregas a medias. Estructuramos un circuito inteligente de producción para acelerar tu llegada al mercado.
+            </p>
+
+            <div class="space-y-4 pt-4">
+              <!-- Value badges -->
+              <div class="bg-white/5 p-4 border border-white/5 flex items-start gap-3 rounded-sm">
+                <span class="text-electric-blue text-lg font-black shrink-0 mt-0.5">✓</span>
+                <p class="text-[11px] uppercase tracking-wider text-white/70 leading-relaxed font-bold">
+                  Planes claros, predecibles, libres de gastos técnicos adicionales de instalación.
+                </p>
+              </div>
+              <div class="bg-white/5 p-4 border border-white/5 flex items-start gap-3 rounded-sm">
+                <span class="text-vibrant-orange text-lg font-black shrink-0 mt-0.5">✓</span>
+                <p class="text-[11px] uppercase tracking-wider text-white/70 leading-relaxed font-bold">
+                  Flexibilidad absoluta: podés migrar de plan o escalar secciones siempre que quieras.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Dynamic steps lists on right -->
+          <div class="lg:col-span-8 grid grid-cols-1 sm:grid-cols-2 gap-6 lg:pl-6">
+            
+            <!-- Step card 1 -->
+            <div class="bg-cyber-black p-8 border border-white/10 hover:border-electric-blue/40 relative overflow-hidden group transition-all rounded-sm">
+              <span class="absolute top-4 right-6 text-6xl font-black font-mono text-white/5 tracking-wider italic select-none">01</span>
+              
+              <div class="mb-5 p-3.5 bg-white/5 w-fit border border-white/5 rounded-sm text-electric-blue group-hover:bg-electric-blue group-hover:text-white transition-all">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-phone-call"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/><path d="M14.05 2a9 9 0 0 1 8 8"/><path d="M14.05 6A5 5 0 0 1 18 10"/></svg>
+              </div>
+
+              <h3 class="text-xl font-black uppercase tracking-tight mb-3 italic">Diagnóstico Express</h3>
+              <p class="text-white/45 text-xs font-semibold leading-relaxed group-hover:text-white/70 transition-colors">
+                En un chat estructurado o videollamada directa de 20 minutos analizamos tu negocio, objetivos comerciales centrales y competidores.
+              </p>
+              <div class="mt-6 h-0.5 bg-electric-blue w-0 group-hover:w-full transition-all duration-300"></div>
+            </div>
+
+            <!-- Step card 2 -->
+            <div class="bg-cyber-black p-8 border border-white/10 hover:border-magenta-accent/40 relative overflow-hidden group transition-all rounded-sm">
+              <span class="absolute top-4 right-6 text-6xl font-black font-mono text-white/5 tracking-wider italic select-none">02</span>
+              
+              <div class="mb-5 p-3.5 bg-white/5 w-fit border border-white/5 rounded-sm text-magenta-accent group-hover:bg-magenta-accent group-hover:text-white transition-all">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-layout"><rect width="18" height="18" x="3" y="3" rx="2" /><path d="M3 9h18" /><path d="M9 21V9" /></svg>
+              </div>
+
+              <h3 class="text-xl font-black uppercase tracking-tight mb-3 italic">Diseño & Prototipo</h3>
+              <p class="text-white/45 text-xs font-semibold leading-relaxed group-hover:text-white/70 transition-colors">
+                En pocos días te mostramos el diseño interactivo de tu sitio con un look moderno, ágil y de alta tecnología enfocado al 100% en conversión.
+              </p>
+              <div class="mt-6 h-0.5 bg-magenta-accent w-0 group-hover:w-full transition-all duration-300"></div>
+            </div>
+
+            <!-- Step card 3 -->
+            <div class="bg-cyber-black p-8 border border-white/10 hover:border-vibrant-orange/40 relative overflow-hidden group transition-all rounded-sm">
+              <span class="absolute top-4 right-6 text-6xl font-black font-mono text-white/5 tracking-wider italic select-none">03</span>
+              
+              <div class="mb-5 p-3.5 bg-white/5 w-fit border border-white/5 rounded-sm text-vibrant-orange group-hover:bg-vibrant-orange group-hover:text-white transition-all">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-rocket"><path d="M4.5 16.5c-1.5 1.25-2.5 3.5-2.5 3.5s2.25-1 3.5-2.5"/><path d="m12 5 9 9-4 4-9-9z"/><path d="M10 8.5 4.5 14c-.5.5-.5 1.5 0 2s1.5.5 2 0l5.5-5.5"/><path d="m14 4 1.5-1.5c1-1 2.5-1 3.5 0s1 2.5 0 3.5L17.5 7.5"/></svg>
+              </div>
+
+              <h3 class="text-xl font-black uppercase tracking-tight mb-3 italic">Lanzamiento en días</h3>
+              <p class="text-white/45 text-xs font-semibold leading-relaxed group-hover:text-white/70 transition-colors">
+                ¡Lanzamiento récord de 2 a 5 días hábiles promedio! Publicamos tu web totalmente responsive, con integraciones de chats, correos y redes conectadas.
+              </p>
+              <div class="mt-6 h-0.5 bg-vibrant-orange w-0 group-hover:w-full transition-all duration-300"></div>
+            </div>
+
+            <!-- Step card 4 -->
+            <div class="bg-cyber-black p-8 border border-white/10 hover:border-electric-blue/40 relative overflow-hidden group transition-all rounded-sm">
+              <span class="absolute top-4 right-6 text-6xl font-black font-mono text-white/5 tracking-wider italic select-none">04</span>
+              
+              <div class="mb-5 p-3.5 bg-white/5 w-fit border border-white/5 rounded-sm text-electric-blue group-hover:bg-electric-blue group-hover:text-white transition-all">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-shield-check"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 11 2 2 4-4"/></svg>
+              </div>
+
+              <h3 class="text-xl font-black uppercase tracking-tight mb-3 italic">Mejora y Guardia Continuas</h3>
+              <p class="text-white/45 text-xs font-semibold leading-relaxed group-hover:text-white/70 transition-colors">
+                Nosotros administramos la infraestructura técnica. Modificamos contenidos según tus campañas y optimizamos de forma constante tus tasas de conversión.
+              </p>
+              <div class="mt-6 h-0.5 bg-electric-blue w-0 group-hover:w-full transition-all duration-300"></div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section (Qué Incluye ImpulsoIT) -->
+    <section id="servicios" class="py-32 bg-cyber-black relative overflow-hidden">
+      <!-- Grid decorations -->
+      <div class="absolute top-0 bottom-0 left-0 right-0 grid-overlay opacity-10 pointer-events-none"></div>
+
+      <div class="container mx-auto px-6 w-full max-w-7xl relative z-10">
+        
+        <!-- Header banner intro -->
+        <div class="max-w-4xl mb-24 space-y-4">
+          <span class="text-electric-blue font-mono text-[10px] uppercase tracking-[0.5em] font-black block">
+            // ARSENAL TECNOLÓGICO DISPONIBLE
+          </span>
+          <h2 class="text-4xl sm:text-5xl md:text-7xl font-black uppercase tracking-tighter leading-none italic">
+            ¿QUÉ INCLUYE TU SUSCRIPCIÓN <br/>
+            CON <span class="text-magenta-accent">IMPULSOIT?</span>
+          </h2>
+          <p class="text-white/50 text-sm md:text-base max-w-xl font-medium italic">
+            Sin cobros complementarios ni facturas técnicas indescifrables. Resolvemos el espectro completo de lo que requiere tu negocio para facturar.
+          </p>
+        </div>
+
+        <!-- 2x2 Dense Brutalist Layout grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-px bg-white/5 border border-white/5">
+          
+          <!-- Block 1 -->
+          <div class="bg-cyber-black p-8 md:p-12 hover:bg-cyber-dark/85 transition-all group flex flex-col justify-between">
+            <div>
+              <div class="flex justify-between items-center mb-6">
+                <span class="text-[9px] font-mono text-white/30 tracking-widest uppercase">SEGURIDAD & GUARDIA</span>
+                <span class="text-[9px] font-mono border border-electric-blue/45 px-2 py-0.5 text-electric-blue uppercase tracking-widest rounded-sm bg-electric-blue/5">ACTIVO 24/7</span>
+              </div>
+              
+              <h3 class="text-2xl font-black uppercase tracking-tighter italic mb-4 text-white group-hover:text-electric-blue transition-colors">Soporte Técnico Especializado</h3>
+              <p class="text-white/45 text-xs font-semibold leading-relaxed">
+                Vigilamos tu sitio web como si fuera una nave en pleno vuelo. Nos encargamos del monitoreo de caídas de servidor, backups automáticos recurrentes y alojamiento web optimizado para que tu web de cara al público esté siempre online, rápida, blindada y lista para recibir compras o consultas.
+              </p>
+            </div>
+            
+            <div class="mt-10 flex justify-between items-center text-[10px] font-mono text-white/20">
+              <span>ZERO DOWN TIME ENGINE</span>
+              <span class="w-2 h-2 bg-electric-blue group-hover:w-8 group-hover:bg-electric-blue transition-all duration-300"></span>
+            </div>
+          </div>
+
+          <!-- Block 2 -->
+          <div class="bg-cyber-black p-8 md:p-12 hover:bg-cyber-dark/85 transition-all group flex flex-col justify-between">
+            <div>
+              <div class="flex justify-between items-center mb-6">
+                <span class="text-[9px] font-mono text-white/30 tracking-widest uppercase">DIFUSIÓN & CAMPAÑAS</span>
+                <span class="text-[9px] font-mono border border-magenta-accent/45 px-2 py-0.5 text-magenta-accent uppercase tracking-widest rounded-sm bg-magenta-accent/5">FLEXIBLE</span>
+              </div>
+              
+              <h3 class="text-2xl font-black uppercase tracking-tighter italic mb-4 text-white group-hover:text-magenta-accent transition-colors">Actualización de Contenido Vivo</h3>
+              <p class="text-white/45 text-xs font-semibold leading-relaxed">
+                No dejes que tu negocio parezca congelado en el tiempo. Nosotros nos encargamos de renovar y agregar textos, catálogos de precios, imágenes optimizadas, banners promocionales y landings internas en menos de 24 horas hábiles. Alineamos tu portal inmediatamente a lo que requiera tu equipo de ventas o tu negocio.
+              </p>
+            </div>
+            
+            <div class="mt-10 flex justify-between items-center text-[10px] font-mono text-white/20">
+              <span>DYNAMIC DATA PIPELINE</span>
+              <span class="w-2 h-2 bg-magenta-accent group-hover:w-8 group-hover:bg-magenta-accent transition-all duration-300"></span>
+            </div>
+          </div>
+
+          <!-- Block 3 -->
+          <div class="bg-cyber-black p-8 md:p-12 hover:bg-cyber-dark/85 transition-all group flex flex-col justify-between">
+            <div>
+              <div class="flex justify-between items-center mb-6">
+                <span class="text-[9px] font-mono text-white/30 tracking-widest uppercase">TRÁFICO DE BÚSQUEDA</span>
+                <span class="text-[9px] font-mono border border-vibrant-orange/45 px-2 py-0.5 text-vibrant-orange uppercase tracking-widest rounded-sm bg-vibrant-orange/5">SEO READY</span>
+              </div>
+              
+              <h3 class="text-2xl font-black uppercase tracking-tighter italic mb-4 text-white group-hover:text-vibrant-orange transition-colors">Posicionamiento Orgánico SEO</h3>
+              <p class="text-white/45 text-xs font-semibold leading-relaxed">
+                Preparamos estructuralmente tu landing page y tu código fuente para que Google lo indexe y posicione eficientemente. Optimizamos la compresión de gráficos para móviles, estructuramos jerárquicamente meta tags, integramos breadcrumbs eficientes y configuramos robots.txt para maximizar el encuentro orgánico de tus clientes.
+              </p>
+            </div>
+            
+            <div class="mt-10 flex justify-between items-center text-[10px] font-mono text-white/20">
+              <span>ORGANIC VISIBILITY BOT</span>
+              <span class="w-2 h-2 bg-vibrant-orange group-hover:w-8 group-hover:bg-vibrant-orange transition-all duration-300"></span>
+            </div>
+          </div>
+
+          <!-- Block 4 -->
+          <div class="bg-cyber-black p-8 md:p-12 hover:bg-cyber-dark/85 transition-all group flex flex-col justify-between">
+            <div>
+              <div class="flex justify-between items-center mb-6">
+                <span class="text-[9px] font-mono text-white/30 tracking-widest uppercase">ESTRATEGIA CRO</span>
+                <span class="text-[9px] font-mono border border-electric-blue/45 px-2 py-0.5 text-electric-blue uppercase tracking-widest rounded-sm bg-electric-blue/5">VENTAS PURAS</span>
+              </div>
+              
+              <h3 class="text-2xl font-black uppercase tracking-tighter italic mb-4 text-white group-hover:text-electric-blue transition-colors">Asesoría / Consultoría de Conversión</h3>
+              <p class="text-white/45 text-xs font-semibold leading-relaxed">
+                Una web que solo se ve linda, no paga salarios. Analizamos mensualmente tu tasa de rebote o rebotes de WhatsApp, optimizamos de raíz los copies descriptivos de tus servicios, refinamos tus formularios y te guiamos en la correcta colocación de los llamados a la acción (CTA) para cosechar más leads.
+              </p>
+            </div>
+            
+            <div class="mt-10 flex justify-between items-center text-[10px] font-mono text-white/20">
+              <span>CONVERSION RATE RADAR</span>
+              <span class="w-2 h-2 bg-electric-blue group-hover:w-8 group-hover:bg-electric-blue transition-all duration-300"></span>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Banner diagnose callout -->
+        <div class="mt-12 bg-white/[0.02] border border-white/5 p-8 rounded-sm flex flex-col lg:flex-row items-center justify-between gap-6">
+          <div class="space-y-1 text-center lg:text-left">
+            <h4 class="text-xl font-black uppercase italic tracking-tight">¿No estás seguro de cuál es el plan óptimo?</h4>
+            <p class="text-white/60 text-xs font-medium">Ofrecemos un diagnóstico express de 10 minutos por WhatsApp. Analizamos tu sector y te aconsejamos sin compromisos.</p>
+          </div>
+          <a 
+            href="https://wa.me/5515981723627" 
+            target="_blank"
+            rel="noopener noreferrer"
+            class="bg-white text-black hover:bg-electric-blue hover:text-white px-7 py-3 text-xs font-black uppercase tracking-wider transition-all border-b-4 border-electric-blue"
+          >
+            Chatear con Especialista
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Pricing Section (Planes Mensuales) -->
+    <section id="planes" class="py-28 bg-[#0a0a0c] border-y border-white/5 relative">
+      <div class="container mx-auto px-6 w-full max-w-7xl">
+        
+        <!-- Header pricing items -->
+        <div class="flex flex-col lg:flex-row justify-between items-start lg:items-end gap-6 mb-20">
+          <div class="space-y-4">
+            <span class="text-magenta-accent font-mono text-[10px] uppercase tracking-[0.5em] font-bold block">
+              // TRANSPARENCIA COMPLETA
+            </span>
+            <h2 class="text-4xl md:text-6xl font-black uppercase tracking-tighter italic leading-none text-white">
+              PLANES MENSUALES <br/>
+              <span class="text-white/25 italic">SIN SETUP INICIAL.</span>
+            </h2>
+            <p class="text-white/55 text-xs md:text-sm font-semibold max-w-lg leading-relaxed">
+              Pagás un fee mensual sumamente predecible. Cancelás o escalás libremente sin penalizaciones técnicas ni contratos de amarre eternos.
+            </p>
+          </div>
+
+          <!-- Currency tabs selector -->
+          <div class="bg-cyber-black p-1.5 border border-white/10 rounded-sm flex items-center gap-1 uppercase font-mono text-xs font-black self-start">
+            <span class="text-white/30 px-3 text-[9px] uppercase tracking-wider select-none font-bold">Moneda:</span>
+            <button data-curr="usd" class="currency-tab-btn px-3 py-1 bg-magenta-accent text-white font-bold transition-all cursor-pointer rounded-sm">USD</button>
+            <button data-curr="ars" class="currency-tab-btn px-3 py-1 text-white/50 hover:text-white transition-all cursor-pointer rounded-sm">ARS</button>
+            <button data-curr="clp" class="currency-tab-btn px-3 py-1 text-white/50 hover:text-white transition-all cursor-pointer rounded-sm">CLP</button>
+          </div>
+        </div>
+
+        <!-- Cards Pricing Grid -->
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+          
+          <!-- Plan 1 -->
+          <div class="bg-cyber-black p-8 md:p-10 border border-white/10 hover:border-electric-blue/40 rounded-sm flex flex-col justify-between relative group transition-all">
+            <div class="space-y-6">
+              <div class="flex justify-between items-center text-[10px] font-mono">
+                <span class="text-electric-blue uppercase font-bold tracking-widest">// PLAN DE ACCESO VELOZ</span>
+                <span class="text-white/40 uppercase">A Escala</span>
+              </div>
+
+              <h3 class="text-2xl font-black uppercase tracking-tighter italic text-white group-hover:text-electric-blue transition-colors">LANDING IMPULSO</h3>
+              
+              <!-- Value displays -->
+              <div class="pricing-card-price flex items-baseline gap-2 pb-5 border-b border-white/5">
+                <span class="price-value text-4xl font-mono font-black italic transition-all duration-200">$20</span>
+                <span class="price-detail text-xs uppercase tracking-widest font-bold text-white/40">USD / mes</span>
+              </div>
+
+              <p class="text-xs text-white/60 italic leading-relaxed font-semibold">
+                Excelente para emprendedores independientes que deseen un portal de tracción rápida. Optimizado para capturar leads de WhatsApp para un producto, evento o servicio específico.
+              </p>
+
+              <hr class="border-white/5" />
+
+              <!-- Bullet features list -->
+              <ul class="space-y-3.5 text-xs font-semibold uppercase tracking-wide text-white/70">
+                <li class="flex items-start gap-2.5">
+                  <span class="text-electric-blue font-black mt-0.5">▪</span>
+                  <span>1 Landing Page ultramoderna, optimizada para conversión</span>
+                </li>
+                <li class="flex items-start gap-2.5">
+                  <span class="text-electric-blue font-black mt-0.5">▪</span>
+                  <span>Código 100% responsivo para celulares y tabletas</span>
+                </li>
+                <li class="flex items-start gap-2.5">
+                  <span class="text-electric-blue font-black mt-0.5">▪</span>
+                  <span class="text-white font-bold">Entrega garantizada de 2 a 5 días hábiles</span>
+                </li>
+                <li class="flex items-start gap-2.5">
+                  <span class="text-electric-blue font-black mt-0.5">▪</span>
+                  <span>1 Cambios de contenido o fotos mensual</span>
+                </li>
+                <li class="flex items-start gap-2.5">
+                  <span class="text-electric-blue font-black mt-0.5">▪</span>
+                  <span>Mantenimiento técnico y copias de seguridad de respaldo</span>
+                </li>
+              </ul>
+            </div>
+
+            <div class="pt-10">
+              <a 
+                href="https://wa.me/5515981723627?text=Quiero%20el%20plan%20Landing%20Impulso%20para%20mi%20negocio" 
+                target="_blank"
+                rel="noopener noreferrer"
+                class="block w-full py-4 text-center bg-[#1c1c24] hover:bg-electric-blue text-white font-black uppercase text-xs tracking-wider border-r-[4px] border-white/30 transition-all rounded-sm"
+              >
+                Quiero mi Landing YA ↗
+              </a>
+              <span class="text-[9px] font-mono text-center text-white/45 block mt-2 tracking-wide font-medium">Lanzamiento inmediato. Sin comisiones de setup.</span>
+            </div>
+          </div>
+
+          <!-- Plan 2 (DESTACADO) -->
+          <div class="bg-cyber-black p-8 md:p-10 border-2 border-magenta-accent rounded-sm flex flex-col justify-between relative group scale-100 lg:scale-[1.03] transition-all shadow-[0_15px_40px_rgba(217,30,255,0.1)] z-10">
+            <span class="absolute -top-3 left-1/2 -translate-x-1/2 bg-magenta-accent text-white text-[9px] font-black uppercase tracking-[0.25em] py-1 px-4 border-r-4 border-white shadow-md rounded-sm">
+              MÁS RECOMENDADO CRO
+            </span>
+
+            <div class="space-y-6">
+              <div class="flex justify-between items-center text-[10px] font-mono pt-2">
+                <span class="text-magenta-accent uppercase font-bold tracking-widest">// MÁS ELEGIDO CORPORACIONES</span>
+                <span class="text-white/40 uppercase">Escalable</span>
+              </div>
+
+              <h3 class="text-2xl font-black uppercase tracking-tighter italic text-white group-hover:text-magenta-accent transition-colors">WEBSITE PREMIUM</h3>
+              
+              <!-- Value displays -->
+              <div class="pricing-card-price flex items-baseline gap-2 pb-5 border-b border-white/5">
+                <span class="price-value text-4xl font-mono font-black italic text-magenta-accent transition-all duration-200">$30</span>
+                <span class="price-detail text-xs uppercase tracking-widest font-bold text-white/40">USD / mes</span>
+              </div>
+
+              <p class="text-xs text-white/70 italic leading-relaxed font-semibold">
+                El motor definitivo para marcas en alta expansión que desean exhibir robustamente un abanico completo de servicios y contenidos orgánicos indexados en metabuscadores.
+              </p>
+
+              <hr class="border-white/5" />
+
+              <!-- Bullet features list -->
+              <ul class="space-y-3.5 text-xs font-semibold uppercase tracking-wide text-white/80">
+                <li class="flex items-start gap-2.5">
+                  <span class="text-magenta-accent font-black mt-0.5">▪</span>
+                  <span>Multipáginas corporativo completo + CMS Administrable</span>
+                </li>
+                <li class="flex items-start gap-2.5">
+                  <span class="text-magenta-accent font-black mt-0.5">▪</span>
+                  <span>Sección de Catálogo o Blog para indexar noticias</span>
+                </li>
+                <li class="flex items-start gap-2.5">
+                  <span class="text-magenta-accent font-black mt-0.5">▪</span>
+                  <span class="text-white font-bold">Entrega garantizada de 5 a 7 días hábiles</span>
+                </li>
+                <li class="flex items-start gap-2.5">
+                  <span class="text-magenta-accent font-black mt-0.5">▪</span>
+                  <span>Actualizaciones de contenido / fotos mensuales ilimitadas</span>
+                </li>
+                <li class="flex items-start gap-2.5">
+                  <span class="text-magenta-accent font-black mt-0.5">▪</span>
+                  <span>Optimización avanzada SEO y velocidad Premium</span>
+                </li>
+                <li class="flex items-start gap-2.5">
+                  <span class="text-magenta-accent font-black mt-0.5">▪</span>
+                  <span>Soporte prioritario directo con ingenieros en línea</span>
+                </li>
+              </ul>
+            </div>
+
+            <div class="pt-10">
+              <a 
+                href="https://wa.me/5515981723627?text=Quiero%20el%20plan%20Website%20Premium%20para%20mi%20empresa" 
+                target="_blank"
+                rel="noopener noreferrer"
+                class="block w-full py-4 text-center bg-magenta-accent hover:bg-white hover:text-black text-white font-black uppercase text-xs tracking-wider border-r-[4px] border-white transition-all rounded-sm shadow-md shadow-magenta-accent/25"
+              >
+                Escalar mi web ahora ↗
+              </a>
+              <span class="text-[9px] font-mono text-center text-white/45 block mt-2 tracking-wide font-medium">Asesoramiento comercial de estructura gratuito por WhatsApp.</span>
+            </div>
+          </div>
+
+          <!-- Plan 3 -->
+          <div class="bg-cyber-black p-8 md:p-10 border border-white/10 hover:border-vibrant-orange/40 rounded-sm flex flex-col justify-between relative group transition-all">
+            <div class="space-y-6">
+              <div class="flex justify-between items-center text-[10px] font-mono">
+                <span class="text-vibrant-orange uppercase font-bold tracking-widest">// ALCANCE SENSACIONAL</span>
+                <span class="text-white/40 uppercase">E-Commerce</span>
+              </div>
+
+              <h3 class="text-2xl font-black uppercase tracking-tighter italic text-white group-hover:text-vibrant-orange transition-colors">PRO CUSTOM & SFT</h3>
+              
+              <!-- Value displays -->
+              <div class="pricing-card-price flex items-baseline gap-2 pb-5 border-b border-white/5">
+                <span class="price-value text-4xl font-mono font-black italic transition-all duration-200">A consultar</span>
+                <span class="price-detail text-xs uppercase tracking-widest font-bold text-white/40">Enterprise</span>
+              </div>
+
+              <p class="text-xs text-white/60 italic leading-relaxed font-semibold">
+                Perfecto para tiendas virtuales automáticas integradas con portales de pago (Stripe, Mercado Pago), automatizaciones complejas de correo y CRM.
+              </p>
+
+              <hr class="border-white/5" />
+
+              <!-- Bullet features list -->
+              <ul class="space-y-3.5 text-xs font-semibold uppercase tracking-wide text-white/70">
+                <li class="flex items-start gap-2.5">
+                  <span class="text-vibrant-orange font-black mt-0.5">▪</span>
+                  <span>E-Commerce robusto con pasarelas de pago y carros integrales</span>
+                </li>
+                <li class="flex items-start gap-2.5">
+                  <span class="text-vibrant-orange font-black mt-0.5">▪</span>
+                  <span>Gestión de stocks y base de datos optimizada en nube</span>
+                </li>
+                <li class="flex items-start gap-2.5">
+                  <span class="text-vibrant-orange font-black mt-0.5">▪</span>
+                  <span>Conector de automatización para CRM, Zapier, Webhooks</span>
+                </li>
+                <li class="flex items-start gap-2.5">
+                  <span class="text-vibrant-orange font-black mt-0.5">▪</span>
+                  <span>Consultoría continua de optimización de tasa de conversión</span>
+                </li>
+                <li class="flex items-start gap-2.5">
+                  <span class="text-vibrant-orange font-black mt-0.5">▪</span>
+                  <span>Infraestructura dedicada ultra-segura para transacciones</span>
+                </li>
+              </ul>
+            </div>
+
+            <div class="pt-10">
+              <a 
+                href="https://wa.me/5515981723627?text=Hola,%20necesito%20cotizar%20un%20proyecto%20web%20Pro%20Custom%20o%20Ecommerce" 
+                target="_blank"
+                rel="noopener noreferrer"
+                class="block w-full py-4 text-center bg-[#1c1c24] hover:bg-vibrant-orange text-white font-black uppercase text-xs tracking-wider border-r-[4px] border-white/30 transition-all rounded-sm"
+              >
+                Hablar de mi proyecto ↗
+              </a>
+              <span class="text-[9px] font-mono text-center text-white/45 block mt-2 tracking-wide font-medium">Análisis de viabilidad y costos en menos de 24hs.</span>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Footnote row tables guarantees -->
+        <div class="mt-12 bg-cyber-black border border-white/5 p-6 rounded-sm">
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6 divide-y md:divide-y-0 md:divide-x divide-white/5 text-center md:text-left text-xs uppercase tracking-wide font-mono font-bold text-white/40">
+            <div class="flex items-center justify-center md:justify-start gap-2.5 pb-4 md:pb-0">
+              <span class="text-electric-blue text-lg">■</span>
+              <span>Cero contratos obligatorios de permanencia</span>
+            </div>
+            <div class="flex items-center justify-center md:justify-start gap-2.5 pt-4 md:pt-0 pb-4 md:pb-0 md:pl-8">
+              <span class="text-magenta-accent text-lg">■</span>
+              <span>Revisiones de diseño incluidas sin penalizaciones</span>
+            </div>
+            <div class="flex items-center justify-center md:justify-start gap-2.5 pt-4 md:pt-0 md:pl-8">
+              <span class="text-vibrant-orange text-lg">■</span>
+              <span>Guardia técnica y copias recurrentes</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Why Us Section (Por qué ImpulsoIT) -->
+    <section class="py-28 bg-cyber-black relative">
+      <div class="container mx-auto px-6 w-full max-w-7xl">
+        
+        <div class="max-w-3xl mb-20 space-y-4">
+          <span class="text-vibrant-orange font-mono text-[10px] uppercase tracking-[0.5em] font-bold block">
+            // DIFERENCIACIÓN E IMPACTO
+          </span>
+          <h2 class="text-4xl md:text-6xl font-black uppercase tracking-tighter italic leading-none">
+            ¿POR QUÉ CONTRATAR <br/>
+            A <span class="text-electric-blue">IMPULSOIT?</span>
+          </h2>
+          <p class="text-white/60 text-xs md:text-sm font-bold italic uppercase tracking-wider">
+            No somos diseñadores aficionados ni agencias corporativas pesadas. Somos un equipo ágil enfocado en tus ventas en línea.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+          
+          <div class="bg-white/[0.01] p-8 border border-white/5 hover:border-electric-blue/30 transition-all rounded-sm">
+            <span class="text-electric-blue font-mono font-bold text-sm block mb-4">// VELOCIDAD</span>
+            <h4 class="text-lg font-black uppercase italic mb-2 tracking-tight">Estreno récord</h4>
+            <p class="text-white/45 text-[11px] leading-relaxed font-semibold">
+              No esperamos meses para mostrar progresos. Tu landing para captación comercial se estrena y publica online de 2 a 5 días con códigos sumamente probados.
+            </p>
+          </div>
+
+          <div class="bg-white/[0.01] p-8 border border-white/5 hover:border-magenta-accent/30 transition-all rounded-sm">
+            <span class="text-magenta-accent font-mono font-bold text-sm block mb-4">// CONVERSIÓN</span>
+            <h4 class="text-lg font-black uppercase italic mb-2 tracking-tight">Obsesión con tus leads</h4>
+            <p class="text-white/45 text-[11px] leading-relaxed font-semibold">
+              Formulamos cada margen del código y colocación de textos pensando exclusivamente en maximizar tus conversiones y contacts por WhatsApp, no solo en "verse bonito".
+            </p>
+          </div>
+
+          <div class="bg-white/[0.01] p-8 border border-white/5 hover:border-vibrant-orange/30 transition-all rounded-sm">
+            <span class="text-vibrant-orange font-mono font-bold text-sm block mb-4">// PARTNERSHIP</span>
+            <h4 class="text-lg font-black uppercase italic mb-2 tracking-tight">Socio estratégico</h4>
+            <p class="text-white/45 text-[11px] leading-relaxed font-semibold">
+              Te acompañamos en la evolución de tu marca. Cambiamos banners según tus campañas, revisamos métricas y optimizamos flujos sin cobrarte como programador externo.
+            </p>
+          </div>
+
+          <div class="bg-white/[0.01] p-8 border border-white/5 hover:border-electric-blue/30 transition-all rounded-sm">
+            <span class="text-electric-blue font-mono font-bold text-sm block mb-4">// SENIORITY</span>
+            <h4 class="text-lg font-black uppercase italic mb-2 tracking-tight">Background Digital</h4>
+            <p class="text-white/45 text-[11px] leading-relaxed font-semibold">
+              Contamos con amplia trayectoria internacional en diseño web UX, posicionamiento SEO, consultorías de growth técnico e interfaces de alta tecnología.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- References & Interactive Case Mock (Galería de scroll alternativos con enlaces reales requested) -->
+    <section id="proyectos" class="py-28 bg-[#0a0a0c] border-t border-white/5 relative overflow-hidden">
+      <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-electric-blue/5 blur-[180px] rounded-full pointer-events-none"></div>
+
+      <div class="container mx-auto px-6 w-full max-w-7xl relative z-10">
+        
+        <div class="max-w-4xl mb-16 space-y-4">
+          <span class="text-electric-blue font-mono text-[10px] uppercase tracking-[0.5em] font-bold block">
+            // RETANDOS DE EXPANSIÓN DIGITAL REAL
+          </span>
+          <h2 class="text-4xl md:text-7xl font-black uppercase tracking-tighter italic leading-none text-white">
+            NUESTROS MODELOS <br/>
+            DE <span class="bg-gradient-to-r from-electric-blue to-magenta-accent bg-clip-text text-transparent italic">MUESTRAS REALES</span>
+          </h2>
+          <p class="text-white/50 text-xs md:text-sm font-semibold max-w-xl italic leading-relaxed">
+            Explorá layouts de alta gama diseñados bajo premisas de responsividad absoluta y fluidez extrema para capturar leads. Pulsá cada pestaña para ver la demo en vivo.
+          </p>
+        </div>
+
+        <!-- Showcase grid containing tabs on left, and mockup browser on right -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-stretch">
+          
+          <!-- Tabs layout selector -->
+          <div class="lg:col-span-5 flex flex-col justify-between space-y-4">
+            <div class="space-y-3">
+              <span class="text-[9px] font-mono text-white/35 uppercase tracking-widest block font-bold">// SELECCIONÁ UN PROYECTO REAL EXPOSITIVO:</span>
+              
+              <!-- Tab button 1 -->
+              <button 
+                data-ref="infocem" 
+                class="reference-tab-btn cursor-pointer w-full p-5 text-left border rounded-sm transition-all focus:outline-none bg-white/5 border-magenta-accent text-white"
+              >
+                <div class="flex justify-between items-center">
+                  <div>
+                    <span class="text-[9px] font-mono text-[#d91eff] uppercase font-bold tracking-widest block">// PORTAL DE SERVICIOS INDUSTRIALES</span>
+                    <span class="text-lg font-black tracking-tighter uppercase italic leading-none">Info Cem Services</span>
+                  </div>
+                  <span class="text-xs text-[#d91eff]">➔</span>
+                </div>
+              </button>
+
+              <!-- Tab button 2 -->
+              <button 
+                data-ref="usgreen" 
+                class="reference-tab-btn cursor-pointer w-full p-5 text-left border rounded-sm transition-all focus:outline-none bg-[#0b0b0b] border-white/5 text-white/40 hover:border-white/20 hover:text-white"
+              >
+                <div class="flex justify-between items-center">
+                  <div>
+                    <span class="text-[9px] font-mono text-[#ff6b00] uppercase font-bold tracking-widest block">// CAPACITACIÓN AMBIENTAL CORPORATIVA</span>
+                    <span class="text-lg font-black tracking-tighter uppercase italic leading-none">US Green Programs</span>
+                  </div>
+                  <span class="text-xs text-white/20">➔</span>
+                </div>
+              </button>
+
+              <!-- Tab button 3 -->
+              <button 
+                data-ref="volta" 
+                class="reference-tab-btn cursor-pointer w-full p-5 text-left border rounded-sm transition-all focus:outline-none bg-[#0b0b0b] border-white/5 text-white/40 hover:border-white/20 hover:text-white"
+              >
+                <div class="flex justify-between items-center">
+                  <div>
+                    <span class="text-[9px] font-mono text-electric-blue uppercase font-bold tracking-widest block">// ENERGÍA & ELECTRICIDAD INDUSTRIAL</span>
+                    <span class="text-lg font-black tracking-tighter uppercase italic leading-none">Volta Electric</span>
+                  </div>
+                  <span class="text-xs text-white/20">➔</span>
+                </div>
+              </button>
+
+            </div>
+
+            <!-- Fast notice info -->
+            <div class="bg-cyber-black p-5 border border-white/5 rounded-sm italic text-xs leading-relaxed text-white/45">
+              💡 <span class="font-bold text-white/80">Fluidez 100% Responsiva</span>: Todos los layouts generados por ImpulsoIT se ajustan milimétricamente en tablets y celulares para asegurar que la tasa de conversión móvil sea siempre estelar.
+            </div>
+          </div>
+
+          <!-- Interactive device mockup on right -->
+          <div class="lg:col-span-7 bg-cyber-black border border-white/10 rounded-sm p-6 md:p-8 flex flex-col justify-between relative overflow-hidden group">
+            
+            <div class="space-y-6 flex-grow">
+              <!-- Technical descriptions swapped from JS -->
+              <div class="border-b border-white/5 pb-4">
+                <h3 id="mock-case-title" class="text-2xl md:text-3xl font-black uppercase tracking-tight italic text-white">Info Cem Services</h3>
+                <p id="mock-case-subtitle" class="text-xs text-electric-blue uppercase font-mono font-bold tracking-wide mt-1">Portal dinámico líder en servicios integrales de infraestructura</p>
+              </div>
+
+              <!-- Interactive Demo Simulated Web Inner Window -->
+              <div 
+                id="mock-browser-screen" 
+                class="bg-cyber-dark border border-white/5 h-64 rounded-sm relative overflow-hidden transition-all duration-300"
+              >
+                <!-- Rendered dynamically inside JS -->
+              </div>
+
+              <p id="mock-case-desc" class="text-xs md:text-sm text-white/60 leading-relaxed font-semibold italic">
+                Excelente arquitectura con un funnel de conversión veloz que triplica tus contactos de WhatsApp.
+              </p>
+
+              <!-- Real active links coordinates requested -->
+              <div class="pt-2">
+                <a 
+                  id="mock-case-link" 
+                  href="https://infocemservices.com/" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  class="font-mono text-xs text-white/70 block uppercase tracking-wider hover:text-white transition-all bg-white/5 p-3 rounded-sm border border-white/5"
+                >
+                  Explorar sitio real: <span class="text-magenta-accent hover:underline">https://infocemservices.com/ ↗</span>
+                </a>
+              </div>
+
+              <!-- Badges tag simulation -->
+              <div class="space-y-2">
+                <span class="text-[8.5px] font-mono text-white/40 uppercase block font-bold tracking-wider">// ATRIBUTOS TÉCNICOS:</span>
+                <div id="mock-case-tags" class="flex flex-wrap gap-2">
+                  <!-- Rendered dynamically -->
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- FAQ Accordion Layout (Dudas frecuentes) -->
+    <section id="faq" class="py-24 bg-cyber-black border-y border-white/5 relative">
+      <div class="container mx-auto px-6 w-full max-w-4xl relative z-10">
+        
+        <!-- Header title compact -->
+        <div class="text-center max-w-xl mx-auto mb-16 space-y-3">
+          <span class="text-electric-blue font-mono text-[10px] uppercase tracking-[0.4em] font-black block">
+            // RESPUESTAS DIRECTAS & AL GRANO
+          </span>
+          <h2 class="text-3xl md:text-5xl font-black uppercase tracking-tighter italic">
+            DUDAS FRECUENTES.
+          </h2>
+          <p class="text-white/50 text-xs italic">
+            Compactamos tus dudas técnicas para que tomes la decisión con absoluta claridad en segundos.
+          </p>
+        </div>
+
+        <!-- Slimmer, compact Accordion with reduced height & padding requested -->
+        <div class="space-y-3">
+          
+          <!-- FAQ 1 -->
+          <div class="accordion-item bg-[#0a0a0c] border border-white/5 rounded-sm overflow-hidden transition-all">
+            <button class="accordion-trigger w-full px-5 py-4 flex items-center justify-between text-left focus:outline-none cursor-pointer">
+              <span class="text-xs md:text-sm font-black uppercase tracking-tight italic text-white hover:text-electric-blue transition-colors">
+                ¿Cuánto tarda el lanzamiento desde que empezamos?
+              </span>
+              <span class="accordion-icon text-xs text-white/40 transition-transform font-bold font-mono">▼</span>
+            </button>
+            <div class="accordion-content bg-[#060608] border-t border-white/5">
+              <div class="px-5 py-3.5 text-xs text-white/60 leading-relaxed font-semibold italic">
+                ¡Entre 2 y 5 días hábiles cómo máximo para landing pages! Esto corre a partir del momento en que confirmemos el contenido básico inicial y definamos tu plan de acción. Para sitios multipáginas robustos, el promedio es de 5 a 7 días hábiles.
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 2 -->
+          <div class="accordion-item bg-[#0a0a0c] border border-white/5 rounded-sm overflow-hidden transition-all">
+            <button class="accordion-trigger w-full px-5 py-4 flex items-center justify-between text-left focus:outline-none cursor-pointer">
+              <span class="text-xs md:text-sm font-black uppercase tracking-tight italic text-white hover:text-electric-blue transition-colors">
+                ¿Puedo cambiar de plan más adelante o dar de baja?
+              </span>
+              <span class="accordion-icon text-xs text-white/40 transition-transform font-bold font-mono">▼</span>
+            </button>
+            <div class="accordion-content bg-[#060608] border-t border-white/5">
+              <div class="px-5 py-3.5 text-xs text-white/60 leading-relaxed font-semibold italic">
+                Sí, con absoluta libertad. Podés migrar hacia un plan de mayor alcance cuando tu mercado se expanda, o darte de baja del servicio de suscripción libremente en cualquier momento. Sin contratos de permanencia obligatorios ni cláusulas de penalización.
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 3 -->
+          <div class="accordion-item bg-[#0a0a0c] border border-white/5 rounded-sm overflow-hidden transition-all">
+            <button class="accordion-trigger w-full px-5 py-4 flex items-center justify-between text-left focus:outline-none cursor-pointer">
+              <span class="text-xs md:text-sm font-black uppercase tracking-tight italic text-white hover:text-electric-blue transition-colors">
+                ¿Qué necesito preparar antes de empezar?
+              </span>
+              <span class="accordion-icon text-xs text-white/40 transition-transform font-bold font-mono">▼</span>
+            </button>
+            <div class="accordion-content bg-[#060608] border-t border-white/5">
+              <div class="px-5 py-3.5 text-xs text-white/60 leading-relaxed font-semibold italic">
+                Solamente necesitamos los materiales básicos de tu marca (logotipo si contás con él, un breve resumen de lo que vendés, y tus accesos rápidos preferidos). Si no contás con redacciones elaboradas, nuestro copywriter premium las escribe por vos de forma persuasiva.
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 4 -->
+          <div class="accordion-item bg-[#0a0a0c] border border-white/5 rounded-sm overflow-hidden transition-all">
+            <button class="accordion-trigger w-full px-5 py-4 flex items-center justify-between text-left focus:outline-none cursor-pointer">
+              <span class="text-xs md:text-sm font-black uppercase tracking-tight italic text-white hover:text-electric-blue transition-colors">
+                ¿Puedo cancelar la suscripción y qué ocurre con mi dominio?
+              </span>
+              <span class="accordion-icon text-xs text-white/40 transition-transform font-bold font-mono">▼</span>
+            </button>
+            <div class="accordion-content bg-[#060608] border-t border-white/5">
+              <div class="px-5 py-3.5 text-xs text-white/60 leading-relaxed font-semibold italic">
+                Si cancelás, detenemos el servicio y las copias hospedadas al concluir tu mes pago. Tu dominio de marca (ej. .com, .cl o .com.ar) te pertenece al 100%. Podés asociarlo a cualquier proveedor externo o migrar tu código de manera inmediata.
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 5 -->
+          <div class="accordion-item bg-[#0a0a0c] border border-white/5 rounded-sm overflow-hidden transition-all">
+            <button class="accordion-trigger w-full px-5 py-4 flex items-center justify-between text-left focus:outline-none cursor-pointer">
+              <span class="text-xs md:text-sm font-black uppercase tracking-tight italic text-white hover:text-electric-blue transition-colors">
+                ¿Qué incluye exactamente el soporte de guardia de cada plan?
+              </span>
+              <span class="accordion-icon text-xs text-white/40 transition-transform font-bold font-mono">▼</span>
+            </button>
+            <div class="accordion-content bg-[#060608] border-t border-white/5">
+              <div class="px-5 py-3.5 text-xs text-white/60 leading-relaxed font-semibold italic">
+                Incluye la solución inmediata de fallos técnicos, protección contra spam, renovación de certificados de seguridad SSL gratuitos, y la subida de los cambios de textos/logos mensuales solicitados por email o chat a la velocidad de la luz.
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 6 -->
+          <div class="accordion-item bg-[#0a0a0c] border border-white/5 rounded-sm overflow-hidden transition-all">
+            <button class="accordion-trigger w-full px-5 py-4 flex items-center justify-between text-left focus:outline-none cursor-pointer">
+              <span class="text-xs md:text-sm font-black uppercase tracking-tight italic text-white hover:text-electric-blue transition-colors">
+                ¿Qué diferencia a ImpulsoIT de una agencia tradicional de diseño?
+              </span>
+              <span class="accordion-icon text-xs text-white/40 transition-transform font-bold font-mono">▼</span>
+            </button>
+            <div class="accordion-content bg-[#060608] border-t border-white/5">
+              <div class="px-5 py-3.5 text-xs text-white/60 leading-relaxed font-semibold italic">
+                Las agencias tradicionales te cobran miles de dólares por adelantado por un desarrollo estático que tarda de 3 a 6 meses de espera, y luego te cobran extras por cada mínimo cambio secundario. Con nosotros, iniciás YA por una baja suscripción mensual y tu sitio evoluciona dinámicamente con tu marca.
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 7 -->
+          <div class="accordion-item bg-[#0a0a0c] border border-white/5 rounded-sm overflow-hidden transition-all">
+            <button class="accordion-trigger w-full px-5 py-4 flex items-center justify-between text-left focus:outline-none cursor-pointer">
+              <span class="text-xs md:text-sm font-black uppercase tracking-tight italic text-white hover:text-electric-blue transition-colors">
+                ¿Trabajan solo con negocios de Argentina o a nivel internacional?
+              </span>
+              <span class="accordion-icon text-xs text-white/40 transition-transform font-bold font-mono">▼</span>
+            </button>
+            <div class="accordion-content bg-[#060608] border-t border-white/5">
+              <div class="px-5 py-3.5 text-xs text-white/60 leading-relaxed font-semibold italic">
+                Hospedamos y operamos proyectos a escala internacional en toda América Latina (Chile, Argentina, Uruguay, Colombia, México) de forma fluida. Es por ello que admitimos cómodamente divisas de pago en USD, ARS, y CLP.
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Footer Element -->
+    <footer class="bg-[#040406] border-t border-white/5 py-16 relative">
+      <div class="container mx-auto px-6 w-full max-w-7xl relative z-10">
+        
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 border-b border-white/5 pb-12">
+          
+          <!-- Column 1 Brand summary -->
+          <div class="lg:col-span-5 space-y-5">
+            <a href="#" class="flex items-center gap-3 group">
+              <div class="w-10 h-10 bg-gradient-to-br from-electric-blue via-magenta-accent to-vibrant-orange rounded-sm flex items-center justify-center font-black text-white text-xl">
+                I
+              </div>
+              <span class="text-2xl font-black tracking-tighter uppercase text-white">
+                Impulso<span class="text-electric-blue">IT</span>
+              </span>
+            </a>
+            <p class="text-white/55 text-xs leading-relaxed max-w-sm">
+              Suscripción premium de diseño y programación veloz. Ponemos a funcionar la mejor versión tecnológica de tu marca para traccionar clientes calificados constantes.
+            </p>
+            <div class="text-[10px] font-mono font-bold tracking-widest text-[#ff6b00]">
+              🟢 OPERACIONES DE GUARDIA ACTIVAS EN TODA LATINOAMÉRICA
+            </div>
+          </div>
+
+          <!-- Column 2 Links -->
+          <div class="lg:col-span-3 space-y-4">
+            <span class="text-[9px] font-mono uppercase tracking-[0.25em] text-white/30 block font-bold">// NAVEGACIÓN</span>
+            <ul class="space-y-2 text-xs font-bold uppercase tracking-wider text-white/70">
+              <li><a href="#proceso" class="hover:text-magenta-accent transition-colors">Metodología</a></li>
+              <li><a href="#servicios" class="hover:text-magenta-accent transition-colors">Qué Incluye</a></li>
+              <li><a href="#planes" class="hover:text-magenta-accent transition-colors">Planes Mensuales</a></li>
+              <li><a href="#proyectos" class="hover:text-magenta-accent transition-colors">Referencias</a></li>
+            </ul>
+          </div>
+
+          <!-- Column 3 Contact channels -->
+          <div class="lg:col-span-4 space-y-4">
+            <span class="text-[9px] font-mono uppercase tracking-[0.25em] text-white/30 block font-bold">// COMUNICACIÓN DIRECTA</span>
+            <div class="space-y-2 text-xs font-semibold tracking-wide">
+              <p class="flex items-center gap-2">
+                <span class="text-white/40">WhatsApp:</span> 
+                <a href="https://wa.me/5515981723627" target="_blank" rel="noopener noreferrer" class="hover:text-magenta-accent transition-colors font-bold">+55 15 98172-3627 ↗</a>
+              </p>
+              <p class="flex items-center gap-2">
+                <span class="text-white/40">Email Oficial:</span> 
+                <a href="mailto:contacto@impulsoit.com" class="hover:text-[#ff6b00] transition-colors font-bold">contacto@impulsoit.com</a>
+              </p>
+              <p class="text-[10px] text-white/30 font-mono mt-4 leading-relaxed italic">
+                "Tu sitio web no es un gasto accesorio corporativo: es una máquina de conversiones. Nosotros la calibramos y la ponemos a funcionar."
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Footer legally mandatory trademark -->
+        <div class="pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-[9px] font-mono text-white/30 uppercase tracking-[0.2em] relative">
+          <p>IMPULSOIT © 2024 - 2026 • TODOS LOS DERECHOS RESERVADOS. BUILT TO CONVERT WITH FUTURISTIC ENERGY.</p>
+          <div class="flex gap-4">
+            <a href="#" class="hover:text-white transition-colors">Términos de Uso</a>
+            <span class="text-white/10">|</span>
+            <a href="#" class="hover:text-white transition-colors">Políticas de Datos</a>
+          </div>
+        </div>
+
+      </div>
+    </footer>
+
+    <!-- Core App Module script -->
+    <script type="module" src="/src/main.js"></script>
   </body>
 </html>
-

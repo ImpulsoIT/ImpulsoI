@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,800&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-electric-blue: #2250f4;
+  --color-vibrant-orange: #ff6b00;
+  --color-magenta-accent: #d91eff;
+  --color-cyber-black: #050505;
+  --color-cyber-dark: #0a0a0c;
+  --color-cyber-grey: #121216;
+  
+  --font-sans: "Plus Jakarta Sans", "Inter", system-ui, sans-serif;
+  --font-display: "Space Grotesk", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+}
+
+@layer utilities {
+  .neon-border-blue {
+    box-shadow: 0 0 15px rgba(34, 80, 244, 0.2);
+    border-color: rgba(34, 80, 244, 0.4);
+  }
+  .neon-border-orange {
+    box-shadow: 0 0 15px rgba(255, 107, 0, 0.2);
+    border-color: rgba(255, 107, 0, 0.4);
+  }
+  .neon-border-magenta {
+    box-shadow: 0 0 15px rgba(217, 30, 255, 0.2);
+    border-color: rgba(217, 30, 255, 0.4);
+  }
+  .neon-glow-magenta {
+    text-shadow: 0 0 10px rgba(217, 30, 255, 0.6);
+  }
+  .neon-glow-blue {
+    text-shadow: 0 0 10px rgba(34, 80, 244, 0.6);
+  }
+  .cyber-gradient {
+    background: linear-gradient(135deg, #2250f4 0%, #d91eff 50%, #ff6b00 100%);
+  }
+}
+
+/* Background grid effect */
+.grid-overlay {
+  background-size: 40px 40px;
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+}
+
+/* Custom scroll bar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #050505;
+}
+::-webkit-scrollbar-thumb {
+  background: #2250f4;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #d91eff;
+}
+
+/* Text outline effect for display headers */
+.text-stroke-neon {
+  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.2);
+  color: transparent;
+}
+.text-stroke-neon:hover {
+  -webkit-text-stroke: 1px #d91eff;
+}
+
+/* Smooth motion config */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Highlight style selection */
+::selection {
+  background: #d91eff;
+  color: #ffffff;
+}
+
+/* Glow lines */
+.glow-divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(217,30,255,0.4), rgba(34,80,244,0.4), transparent);
+}
+
+/* Interactive Accordion micro-adjustments */
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.25s ease-out;
+  opacity: 0;
+}
+.accordion-item.active .accordion-content {
+  max-height: 200px;
+  opacity: 1;
+}
+.accordion-item.active .accordion-icon {
+  transform: rotate(180deg);
+  color: #ff6b00;
+}
