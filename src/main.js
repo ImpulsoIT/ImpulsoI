@@ -134,18 +134,18 @@ function setupCurrencySwitcher() {
 
   const pricesData = {
     usd: [
-      { price: "$20", detail: "USD / mes" },
       { price: "$30", detail: "USD / mes" },
+      { price: "$50", detail: "USD / mes" },
       { price: "A consultar", detail: "Enterprise" }
     ],
     ars: [
-      { price: "$28.020", detail: "ARS / mes" },
       { price: "$42.030", detail: "ARS / mes" },
+      { price: "$70.050", detail: "ARS / mes" },
       { price: "A consultar", detail: "Enterprise" }
     ],
     clp: [
-      { price: "$19.000", detail: "CLP / mes" },
       { price: "$28.000", detail: "CLP / mes" },
+      { price: "$47.000", detail: "CLP / mes" },
       { price: "A consultar", detail: "Enterprise" }
     ]
   };
