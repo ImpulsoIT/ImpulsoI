@@ -139,13 +139,13 @@ function setupCurrencySwitcher() {
       { price: "A consultar", detail: "Enterprise" }
     ],
     ars: [
-      { price: "$42.030", detail: "ARS / mes" },
-      { price: "$70.050", detail: "ARS / mes" },
+      { price: "$43.800", detail: "ARS / mes" },
+      { price: "$73.000", detail: "ARS / mes" },
       { price: "A consultar", detail: "Enterprise" }
     ],
-    clp: [
-      { price: "$28.000", detail: "CLP / mes" },
-      { price: "$47.000", detail: "CLP / mes" },
+    cop: [
+      { price: "$103.200", detail: "COP / mes" },
+      { price: "$172.000", detail: "COP / mes" },
       { price: "A consultar", detail: "Enterprise" }
     ]
   };

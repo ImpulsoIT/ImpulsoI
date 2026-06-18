@@ -5,6 +5,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ImpulsoIT | Sitios Web por Suscripción Modernos en 2 a 5 Días</title>
     <!-- Favicon -->
+    <script>
+      // Safeguard against sandbox environments or browser extensions attempting to assign read-only window.fetch
+      (function() {
+        try {
+          var originalFetch = window.fetch;
+          var fetchValue = originalFetch;
+          Object.defineProperty(window, 'fetch', {
+            get: function() {
+              return fetchValue;
+            },
+            set: function(val) {
+              fetchValue = val;
+            },
+            configurable: true,
+            enumerable: true
+          });
+        } catch (e) {
+          try {
+            if (typeof Window !== 'undefined' && Window.prototype) {
+              var desc = Object.getOwnPropertyDescriptor(Window.prototype, 'fetch');
+              if (desc && desc.configurable) {
+                var prototypeFetch = desc.get;
+                var valStore = prototypeFetch;
+                Object.defineProperty(Window.prototype, 'fetch', {
+                  get: function() { return valStore; },
+                  set: function(v) { valStore = v; },
+                  configurable: true
+                });
+              }
+            }
+          } catch (err) {}
+        }
+      })();
+    </script>
     <link rel="icon" type="image/svg+xml" href="./public/favicon.svg" />
   </head>
   <body class="bg-cyber-black text-white font-sans overflow-x-hidden relative grid-overlay">
@@ -484,7 +518,7 @@
             <span class="text-white/30 px-3 text-[9px] uppercase tracking-wider select-none font-bold">Moneda:</span>
             <button data-curr="usd" class="currency-tab-btn px-3 py-1 bg-magenta-accent text-white font-bold transition-all cursor-pointer rounded-sm">USD</button>
             <button data-curr="ars" class="currency-tab-btn px-3 py-1 text-white/50 hover:text-white transition-all cursor-pointer rounded-sm">ARS</button>
-            <button data-curr="clp" class="currency-tab-btn px-3 py-1 text-white/50 hover:text-white transition-all cursor-pointer rounded-sm">CLP</button>
+            <button data-curr="cop" class="currency-tab-btn px-3 py-1 text-white/50 hover:text-white transition-all cursor-pointer rounded-sm">COP</button>
           </div>
         </div>
 
